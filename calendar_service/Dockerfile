@@ -29,7 +29,7 @@ COPY . .
 
 # ✅ Move credentials file before switching user
 RUN mkdir -p calendar_service && \
-    mv gen-lang-client-0569941520-f8d232aa3509.json calendar_service/
+    mv gen-lang-client-0569941520-2b5f6c75848c.json calendar_service/
 
 # ✅ Now switch to non-root user
 USER appuser

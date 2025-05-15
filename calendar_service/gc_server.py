@@ -6,7 +6,7 @@ from google.oauth2 import service_account
 
 
 # Path to the service account JSON key file
-SERVICE_ACCOUNT_FILE = "./calendar_service/gen-lang-client-0569941520-f8d232aa3509.json"
+SERVICE_ACCOUNT_FILE = "./calendar_service/gen-lang-client-0569941520-2b5f6c75848c.json"
 # Google Calendar ID of the doctor
 DOCTOR_CALENDAR_ID='f9ba67411e777a9ed949ddcff622968d973c9135a7cf4ae4fc1e70a3d3af7593@group.calendar.google.com'
 

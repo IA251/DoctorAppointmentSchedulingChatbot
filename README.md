@@ -86,42 +86,73 @@ git clone https://github.com/IA251/DoctorAppointmentSchedulingChatbot.git
 cd appointment_bot
 ```
 
+### 🔐 Handling Google Credentials (Service Account)
+
+To securely access the Google Calendar API, the system uses a Google Service Account credential file (calendar_service.json).
+
+➡️ Please make sure to:
+
+Obtain the calendar_service.json file from the project owner (it will be sent via email).
+
+Place the file inside the calendar_service directory:
+
+```
+APPOINTMENT_BOT/
+└── calendar_service/
+    └── calendar_service.json
+```
+
 ### Start the system:
 
 ```bash
 docker-compose up --build
 ```
 
-### Access the chatbot API:
+### 💻 Accessing the System via Browser
+
+Once the system is up and running, you can access the user interface through your browser at:
 
 ```bash
-POST http://localhost:5000/chat
-Body: { "message": "I'd like to book an appointment for tomorrow morning" }
+POST http://localhost:3000
 ```
 
 ## 🗂️ Folder Structure
 
 ```
-.
-├── calendar_service/
-│   └── app.py
-├── chat_service/
-│   └── app.py
-├── docker-compose.yml
-├── README.md
+APPOINTMENT_BOT/
+│
+├── calendar_service/                # Calendar microservice
+├── chatbot/                         # Chatbot backend (Python)
+│   ├── chatbot.py
+│   ├── Dockerfile
+│   └── requirements.txt
+│
+├── frontend/                        # React frontend (JavaScript)
+│   ├── node_modules/
+│   ├── public/
+│   └── src/
+│       ├── App.js, DoctorChat.jsx, etc.
+│   ├── Dockerfile
+│   ├── package.json
+│   └── package-lock.json
+│
+├── docker-compose.yml              # Docker Compose file to orchestrate services
+├── README.md                       # Project README
+└── .gitignore
+
 ```
 
 ## ✨ Example Conversation Flow
 
-**User:** "Hi, can I book an appointment for Thursday at 11?"
+**User:** "Hi, can I book an appointment for Wednesdayat 11?"
 
 → **Bot:**  
-“Sure! I’ve found an available time on Thursday at 11:00. Would you like to confirm it?”
+“Okay, I can help with that! To book your appointment, could you please provide your name?”
 
 **User:** "Yes, my name is Sarah."
 
 → **Bot:**  
-“Great! Your appointment has been successfully booked. See you on Thursday!”
+“Okay Sarah, your appointment for Wednesday, May 21st at 11:00 AM is confirmed! We look forward to seeing you then”
 
 ---
 
