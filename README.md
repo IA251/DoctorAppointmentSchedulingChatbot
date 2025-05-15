@@ -83,7 +83,7 @@ This project is split into two main microservices:
 
 ```bash
 git clone https://github.com/IA251/DoctorAppointmentSchedulingChatbot.git
-cd appointment_bot
+cd DoctorAppointmentSchedulingChatbot
 ```
 
 ### 🔐 Handling Google Credentials (Service Account)
