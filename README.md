@@ -97,7 +97,7 @@ Obtain the calendar_service.json file from the project owner (it will be sent vi
 Place the file inside the calendar_service directory:
 
 ```
-APPOINTMENT_BOT/
+DoctorAppointmentSchedulingChatbot/
 └── calendar_service/
     └── calendar_service.json
 ```
